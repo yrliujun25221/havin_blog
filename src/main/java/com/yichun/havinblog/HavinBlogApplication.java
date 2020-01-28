@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("resource/Mapper")
+@MapperScan("com.yichun.havinblog.dao")
 public class HavinBlogApplication {
 
     public static void main(String[] args) {

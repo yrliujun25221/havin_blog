@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>浩文博客登录页</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <script type="text/javascript" th:src="@{/jquery/jquery-2.1.4.min.js}"></script>
+    <script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
+</head>
+<style>
+    body {
+        /*background: url("/static/img/1.jpg");*/
+        background-color: #7e9eb3;
+    }
+    .layui-card {
+        margin: 200px 300px 100px 300px;
+    }
+</style>
+<body>
+    <div class="layui-container">
+
+        <div class="layui-card">
+            <div class="layui-card-header">
+                <strong>浩文博客登录</strong>
+            </div>
+            <div class="layui-card-body">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="userName" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" id="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+<!--                    <div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" id="login">登录</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function () {
+        $("#login").click(function () {
+            var userName = $("#userName").val();
+            var password = $("#password").val();
+
+            layer.msg("用户名是" + userName + ";密码是" + password);
+        });
+    })
+</script>
+</html>
