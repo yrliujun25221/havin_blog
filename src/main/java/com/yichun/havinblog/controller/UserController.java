@@ -22,15 +22,6 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 到登陆页面
-     * @return
-     */
-    @RequestMapping("/toLoginPage")
-    public String toLoginPage() {
-        return "login";
-    }
-
-    /**
      * 查询用户基础信息
      * @param request
      * @return

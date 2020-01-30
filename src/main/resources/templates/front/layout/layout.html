@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>浩文博客</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <script type="text/javascript" th:src="@{/jquery/jquery-2.1.4.min.js}"></script>
+    <script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
+</head>
+<style>
+    .layui-nav {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 80px;
+    }
+    .main {
+        padding: 90px 0 10px 0;
+        background-color: beige;
+        min-height: 800px;
+    }
+    .layui-container {
+        background-color: white;
+        min-height: 800px;
+    }
+    .footer {
+        background-color: #3F3F3F;
+        width: 100%;
+        height: 100px;
+        color: white;
+    }
+</style>
+<body>
+    <ul class="layui-nav" >
+        <li class="layui-nav-item"><a href="">浩文博客</a></li>
+        <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+        <li class="layui-nav-item"><a href="">讨论圈</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">话题</a>
+            <dl class="layui-nav-child" id="demo"> <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <hr class="layui-bg-red">
+    </ul>
+
+    <div class="main" th:include="::content">
+        首页
+    </div>
+
+    <div class="footer">
+        <hr class="layui-bg-red" style="height: 2px">
+        <div class="layui-row" style="padding: 10px auto; width: 100%; text-align: center">
+            <span>友情链接</span>
+            <span>联系我们</span>
+            <span>关于我们</span>
+            <span>赞助我们</span>
+        </div>
+    </div>
+</body>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+        element.render('#demo');
+    });
+</script>
+</html>
