@@ -14,7 +14,5 @@ import lombok.Data;
 @Builder
 public class QueryUserBaseInfoResponse extends BaseResponse {
 
-    private static final long serialVersionUID = -7137337628513301814L;
-
     private UserDto userDto;
 }

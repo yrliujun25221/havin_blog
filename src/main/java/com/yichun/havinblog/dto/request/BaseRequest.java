@@ -10,4 +10,5 @@ import java.io.Serializable;
  */
 public class BaseRequest implements Serializable {
 
+    private static final long serialVersionUID = -5279604137361301978L;
 }

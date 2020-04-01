@@ -9,4 +9,6 @@ import java.io.Serializable;
  * @date 2020/1/27 18:08
  */
 public class BaseResponse implements Serializable {
+
+    private static final long serialVersionUID = -4235279992022118652L;
 }

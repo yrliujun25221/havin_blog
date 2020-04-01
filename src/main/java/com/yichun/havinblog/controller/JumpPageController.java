@@ -19,7 +19,7 @@ public class JumpPageController {
      */
     @RequestMapping("/")
     public String toIndexPage() {
-        return "front/index";
+        return "front/index/index";
     }
 
     /**
